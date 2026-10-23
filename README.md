@@ -1,2 +1,7 @@
-# Projeto-HTMLDjango
-Repositório de página HTML com a aplicação de Django.
+# ATV09 — Migração do Portal para Django
+
+Alunos:
+- Alex Fernandes de Araújo Leite
+- Gustavo Henrique Malta Ferreira
+
+Atividade realizada na matéria de Programação Web.
