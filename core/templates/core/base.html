@@ -1,0 +1,47 @@
+{% load static %}<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portal{% endblock %}</title>
+    <link rel="icon" href="{% static 'core/img/valen.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1>Página</h1>
+    </header>
+
+    <div class="container">
+
+        {# Menu gerado dinamicamente a partir do model Menu #}
+        <nav class="menu" id="menu-id">
+            <h3>Menu</h3>
+            <hr>
+            {% for item in itens_menu %}
+                <p>
+                    {% if item.eh_externo %}
+                        <a href="{{ item.get_url }}" target="_blank" rel="noopener noreferrer">{{ item.titulo }}</a>
+                    {% else %}
+                        <a href="{{ item.get_url }}"{% if item.conteudo.slug == slug_atual %} class="ativo" aria-current="page"{% endif %}>{{ item.titulo }}</a>
+                    {% endif %}
+                </p>
+                <hr>
+            {% empty %}
+                <p>Nenhum item de menu cadastrado.</p>
+            {% endfor %}
+        </nav>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+    </div>
+
+    <footer>
+        <p>©Gustavo H. &amp; ©Alex F. - 513 - 2026</p>
+    </footer>
+
+</body>
+</html>

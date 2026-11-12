@@ -1,0 +1,11 @@
+{% extends "core/base.html" %}
+
+{% block title %}{{ conteudo.titulo|default:"Página Principal" }}{% endblock %}
+
+{% block content %}
+    {% if conteudo %}
+        {{ conteudo.conteudo_html|safe }}
+    {% else %}
+        <p>Nenhum conteúdo de página inicial cadastrado. Acesse o <a href="/admin/">Django Admin</a> e crie um Conteúdo com o slug <strong>inicio</strong>.</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "core/base.html" %}
+
+{% block title %}{{ conteudo.titulo }}{% endblock %}
+
+{% block content %}
+    {# |safe: o HTML vem do banco e é cadastrado só por administradores #}
+    {{ conteudo.conteudo_html|safe }}
+{% endblock %}
