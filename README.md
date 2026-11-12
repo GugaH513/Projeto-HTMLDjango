@@ -2,7 +2,7 @@
 
 **Dupla:** Gustavo Henrique Malta Ferreira e Alex Fernandes de Araújo Leite — Turma 513 (IFAL)
 
-##Descrição
+## Descrição
 
 Evolução do portal da ATV06 (HTML semântico, CSS, Flexbox e responsividade) para uma
 aplicação **Django**. A identidade visual, o layout e as imagens foram mantidos; o que mudou:
@@ -12,7 +12,7 @@ aplicação **Django**. A identidade visual, o layout e as imagens foram mantido
 - tudo é administrável pelo **Django Admin**;
 - a navegação usa URLs e Views do Django (o `fetch()` em JavaScript da ATV06 foi substituído).
 
-## Tecnologias
+## Ferramentas
 
 Python 3 · Django 5.2 · SQLite · HTML5 · CSS3 (Flexbox/Grid/Media Queries) · Git/GitHub
 
